@@ -1,49 +1,45 @@
 <html>
     <head>
         <title>UI Experiments</title>
-    </head>
+        <link rel="stylesheet" href="styles/styles.css">
+        <style>
+            body {
+                margin: 0;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: #e8dfc8;
+                font-family: Arial, sans-serif;
+                color: #171717;
+            }
 
-    <body style="
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: #e8dfc8;
-        font-family: Arial, sans-serif;
-        color: #171717;
-    ">
+            .title {
+                margin-bottom: 45px;
+                font-size: 42px;
+                letter-spacing: 3px;
+                font-weight: 900;
+                text-transform: uppercase;
+                transform: rotate(-2deg);
+                text-shadow: 3px 3px 0 #d94b3d;
+            }
 
-        <h1 style="
-            margin-bottom: 45px;
-            font-size: 42px;
-            letter-spacing: 3px;
-            font-weight: 900;
-            text-transform: uppercase;
-            transform: rotate(-2deg);
-            text-shadow: 3px 3px 0 #d94b3d;
-        ">
-            UI Font Experiments
-        </h1>
-
-        <div>
-            <button style="
+            .button {
                 position: relative;
                 padding: 24px 48px;
                 border: 5px solid #171717;
                 border-radius: 38% 62% 55% 45% / 48% 35% 65% 52%;
-                background:
-                    linear-gradient(
-                        125deg,
-                        #e6c229 0%,
-                        #e6c229 32%,
-                        #d94b3d 32%,
-                        #d94b3d 58%,
-                        #247ba0 58%,
-                        #247ba0 78%,
-                        #f4eee1 78%
-                    );
+                background: linear-gradient(
+                    125deg,
+                    #e6c229 0%,
+                    #e6c229 32%,
+                    #d94b3d 32%,
+                    #d94b3d 58%,
+                    #247ba0 58%,
+                    #247ba0 78%,
+                    #f4eee1 78%
+                );
                 color: #171717;
                 font-size: 18px;
                 font-weight: 900;
@@ -57,26 +53,36 @@
                     transform 0.2s ease,
                     box-shadow 0.2s ease;
                 overflow: hidden;
-            "
-            onmouseover="
-                this.style.transform='rotate(2deg) scale(1.08)';
-                this.style.boxShadow='12px 12px 0 #171717, -6px -6px 0 #d94b3d';
-            "
-            onmouseout="
-                this.style.transform='rotate(-3deg) scale(1)';
-                this.style.boxShadow='9px 9px 0 #171717, -5px -5px 0 #247ba0';
-            "
-            onmousedown="
-                this.style.transform='rotate(2deg) scale(0.96)';
-            "
-            onmouseup="
-                this.style.transform='rotate(2deg) scale(1.08)';
-            ">
-                <span style="
-                    position: relative;
-                    z-index: 2;
-                    text-shadow: 2px 2px 0 #f4eee1;
-                ">
+            }
+
+            .button:hover {
+                transform: rotate(2deg) scale(1.08);
+                box-shadow:
+                    12px 12px 0 #171717,
+                    -6px -6px 0 #d94b3d;
+            }
+
+            .button:active {
+                transform: rotate(2deg) scale(0.96);
+            }
+
+            .button-text {
+                position: relative;
+                z-index: 2;
+                text-shadow: 2px 2px 0 #f4eee1;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1 class="title">
+            UI Font Experiments
+        </h1>
+
+        <div>
+            <button class="button">
+                <span class="button-text">
                     CLICK ME
                 </span>
             </button>
